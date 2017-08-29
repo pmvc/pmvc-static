@@ -1,0 +1,7 @@
+{
+	"name": "PMVC site template",
+	"description": "A demo site for easy copy and paste.",
+	"repository": "https://github.com/pmvc/react-pmvc",
+	"logo": "https://avatars2.githubusercontent.com/u/10222454",
+	"keywords": ["PMVC", "php", "framework"]
+}

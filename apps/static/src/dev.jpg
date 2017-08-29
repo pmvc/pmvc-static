@@ -1,0 +1,15 @@
+<?php
+require_once('/home/sys/web/lib/cache_header_helper.php');
+$image_url = 'http://devel.cometw.com/0force/middleware.php/image/'.$_SERVER['QUERY_STRING'];
+
+//output
+header('Content-type: image/jpeg');
+header("IMAGE: ".$image_url);
+$int = readfile($image_url);
+if(!$int){
+    $cacheHeader = new CacheHeaderHelper();
+    $cacheHeader->noCache();
+    http_response_code(500);
+    exit();
+}
+flush();

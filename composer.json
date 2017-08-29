@@ -1,0 +1,18 @@
+{
+    "require": {
+        "pmvc/pmvc": "*",
+        "pmvc/heroku-config": "*",
+        "pmvc-plugin/app_action_router": "*",
+        "pmvc-plugin/controller": "*",
+        "pmvc-plugin/cli": "*",
+        "pmvc-plugin/dispatcher": "*",
+        "pmvc-plugin/dotenv": "*",
+        "pmvc-plugin/dev": "*",
+        "pmvc-plugin/error": "*",
+        "pmvc-plugin/debug": "*",
+        "pmvc-plugin/debug_console": "*",
+        "pmvc-plugin/default_forward": "*",
+        "mouf/nodejs-installer": "~1.0"
+    }
+
+}
