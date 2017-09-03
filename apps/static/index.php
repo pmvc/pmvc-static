@@ -39,9 +39,11 @@ class StaticApp extends Action
             $pUrl = \PMVC\plug('url');
             $queryString = \PMVC\plug('getenv')->
                 get('QUERY_STRING');
-            $wholePath = $pUrl->getPath(). $queryString;
+            $pathAndQuery = 
+                $pUrl->getPath().
+                $queryString;
             $url = $pUrl->getUrl($staticRoot);
-            $url->set($wholePath);
+            $url->set($pathAndQuery);
             $result = (string)$url;
             $checkPath = $url->getPath();
             if ( 1 >= strlen($checkPath) ||

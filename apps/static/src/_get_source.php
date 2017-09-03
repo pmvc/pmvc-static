@@ -9,14 +9,20 @@ class GetSource
     function __invoke($files)
     {
         $staticRoot = \PMVC\getOption('staticRoot');
-        $tmpDir = \PMVC\plug('tmp')->dir();
+        $pTmp = \PMVC\plug('tmp');
+        $fInfo = \PMVC\plug('file_info');
+        $tmpDir = $pTmp->dir();
         foreach ($files as $f) {
             ob_start();
             $isOk = readfile($staticRoot.$f);
             $content = ob_get_contents();
             ob_end_clean();
             if ($isOk) {
-                file_put_contents($tmpDir.$f, $content);
+                $new = tempnam($tmpDir, '_').
+                    '.'.
+                    $fInfo->path($f)->
+                    getExt();
+                file_put_contents($new, $content);
             } else {
                 echo $content;
             }

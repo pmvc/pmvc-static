@@ -14,14 +14,26 @@ class StaticCook
         $caller = $this->caller;
         switch ($type) {
             case 'css':
-                $caller->css($f);
+                $caller->css($this->_splitPath());
                 break;
             case 'js':
-                $caller->js($f);
+                $caller->js($this->_splitPath());
                 break;
             default:
                 $caller->image($f);
                 break;
         }
+    }
+
+    private function _splitPath()
+    {
+        $rawPath = \PMVC\plug('url')->getPath(); 
+        $paths = explode('/', $rawPath);
+        $paths = array_slice($paths, 3);
+        $cookPath = join('/', $paths);
+        $files = explode(';', $cookPath); 
+        $tmpDir = $this->caller->get_source($files);
+        $getFiles = glob($tmpDir.'*');
+        return $getFiles;
     }
 }
