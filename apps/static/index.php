@@ -43,11 +43,16 @@ class StaticApp extends Action
             $url = $pUrl->getUrl($staticRoot);
             $url->set($wholePath);
             $result = (string)$url;
-            if (1>=strlen($url->getPath())) {
+            $checkPath = $url->getPath();
+            if ( 1 >= strlen($checkPath) ||
+                $staticRoot === $checkPath
+            ) {
                 http_response_code(403); 
                 echo 'Please specific path.';
                 return;
             } else {
+                $fileInfo = \PMVC\plug('file_info')->path($result);
+                header('Content-Type: '.$fileInfo->getContentType());
                 readfile($result);
             }
         }
