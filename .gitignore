@@ -1,7 +1,7 @@
 vendor
 .php_cs.cache
 .*.sw?
-node_modules
 npm-debug.log
 coverage*
 .env.pmvc
+.yarn-integrity
