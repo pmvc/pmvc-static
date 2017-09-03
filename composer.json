@@ -2,7 +2,8 @@
     "require": {
         "pmvc/pmvc": "*",
         "pmvc/heroku-config": "*",
-        "pmvc-plugin/app_action_router": "*",
+        "pmvc-plugin/http": "*",
+        "pmvc-plugin/tmp": "*",
         "pmvc-plugin/controller": "*",
         "pmvc-plugin/cli": "*",
         "pmvc-plugin/dispatcher": "*",

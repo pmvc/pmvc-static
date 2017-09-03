@@ -9,10 +9,13 @@ include_once('../vendor/autoload.php');
     ,'debug'=>null
     ,'dev'=>null
     ,'dotenv'=>[(is_file('../.env.pmvc')? '../.env.pmvc' : '../.env.sample')]
-    ,'app_action_router'=>null
+    ,'http'=>null
 ]);
 
 $controller = \PMVC\plug('controller');
-if($controller->plugApp()){
+if($controller->plugApp([], [
+    'c'=>'static',
+    'd'=>'static'
+])){
     $controller->process();
 }

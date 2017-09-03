@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7d480a90aa5ca691aa9e2a1e21257f59",
+    "content-hash": "9923eb4ac0508a570e8c2c19fabc7f32",
     "packages": [
         {
             "name": "mouf/nodejs-installer",
@@ -97,44 +97,6 @@
                 "pmvc"
             ],
             "time": "2017-08-03T06:56:39+00:00"
-        },
-        {
-            "name": "pmvc-plugin/app_action_router",
-            "version": "0.7.8",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pmvc-plugin/app_action_router.git",
-                "reference": "b700542c74d8685ef7eeda9b9c8c91bf9c368d81"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/app_action_router/zipball/b700542c74d8685ef7eeda9b9c8c91bf9c368d81",
-                "reference": "b700542c74d8685ef7eeda9b9c8c91bf9c368d81",
-                "shasum": ""
-            },
-            "require": {
-                "pmvc-plugin/http": "*",
-                "pmvc-plugin/url": "*",
-                "pmvc/pmvc": "*"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hill",
-                    "email": "hill@kimo.com"
-                }
-            ],
-            "description": "PMVC App Action Router",
-            "keywords": [
-                "plug-in",
-                "pmvc",
-                "router"
-            ],
-            "time": "2016-08-13T12:26:30+00:00"
         },
         {
             "name": "pmvc-plugin/asset",
@@ -556,6 +518,81 @@
             "time": "2017-06-21T20:57:23+00:00"
         },
         {
+            "name": "pmvc-plugin/file_info",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmvc-plugin/file_info.git",
+                "reference": "7a100f6006e14f37e74f8b608ab8549b386d1a04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmvc-plugin/file_info/zipball/7a100f6006e14f37e74f8b608ab8549b386d1a04",
+                "reference": "7a100f6006e14f37e74f8b608ab8549b386d1a04",
+                "shasum": ""
+            },
+            "require": {
+                "pmvc/pmvc": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hill",
+                    "email": "hill@kimo.com"
+                }
+            ],
+            "description": "PMVC Plugin for File information",
+            "keywords": [
+                "file",
+                "plug-in",
+                "pmvc"
+            ],
+            "time": "2016-04-04T17:24:16+00:00"
+        },
+        {
+            "name": "pmvc-plugin/file_list",
+            "version": "0.3.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmvc-plugin/file_list.git",
+                "reference": "e016beb928dfa0bd1553f8df36ca2214511e8bf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmvc-plugin/file_list/zipball/e016beb928dfa0bd1553f8df36ca2214511e8bf4",
+                "reference": "e016beb928dfa0bd1553f8df36ca2214511e8bf4",
+                "shasum": ""
+            },
+            "require": {
+                "pmvc-plugin/file_info": "*",
+                "pmvc/pmvc": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hill",
+                    "email": "hill@kimo.com"
+                }
+            ],
+            "description": "A library let you easy get all file in one specific folder",
+            "homepage": "https://github.com/pmvc-plugin/file_list",
+            "keywords": [
+                "file",
+                "plug",
+                "plug-in",
+                "pmvc"
+            ],
+            "time": "2016-12-28T07:25:19+00:00"
+        },
+        {
             "name": "pmvc-plugin/get",
             "version": "0.1.6",
             "source": {
@@ -665,6 +702,43 @@
                 "pmvc"
             ],
             "time": "2017-06-16T10:38:59+00:00"
+        },
+        {
+            "name": "pmvc-plugin/tmp",
+            "version": "0.1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmvc-plugin/tmp.git",
+                "reference": "312ed7e82e4a57626f910ceae880ae17b57d1b16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmvc-plugin/tmp/zipball/312ed7e82e4a57626f910ceae880ae17b57d1b16",
+                "reference": "312ed7e82e4a57626f910ceae880ae17b57d1b16",
+                "shasum": ""
+            },
+            "require": {
+                "pmvc-plugin/file_list": "*",
+                "pmvc/pmvc": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hill",
+                    "email": "hill@kimo.com"
+                }
+            ],
+            "description": "temporary files management",
+            "keywords": [
+                "plug-in",
+                "pmvc",
+                "temp"
+            ],
+            "time": "2016-07-10T10:48:17+00:00"
         },
         {
             "name": "pmvc-plugin/underscore",

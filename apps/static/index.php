@@ -1,5 +1,5 @@
 <?php
-namespace PMVC\App\hello_app;
+namespace PMVC\App\static_app;
 
 use PMVC;
 use PMVC\MappingBuilder;
@@ -7,79 +7,51 @@ use PMVC\Action;
 use PMVC\ActionForm;
 
 $b = new MappingBuilder();
-${_INIT_CONFIG}[_CLASS] = __NAMESPACE__.'\HELLO_APP';
+${_INIT_CONFIG}[_CLASS] = __NAMESPACE__.'\StaticApp';
 ${_INIT_CONFIG}[_INIT_BUILDER] = $b;
 
 $b->addAction('index', [ 
     _FUNCTION => [ 
         ${_INIT_CONFIG}[_CLASS],
         'index'
-    ], 
-    _FORM => __NAMESPACE__.'\HelloVerify'
-]);
-
-$b->addAction('lazy-index', [ 
-    _FUNCTION => [
-        ${_INIT_CONFIG}[_CLASS],
-        'index_laziness'
     ] 
 ]);
 
-$b->addAction('ttfb');
-
-$b->addAction('ttfb-body', 'ttfbBody');
-
-$b->addForward('home', [ 
-    _PATH => 'hello',
-    _TYPE => 'view',
-    _ACTION => 'lazy-index'
-]);
-
-$b->addForward('laze', [ 
-    _PATH => 'laze',
-    _TYPE => 'view'
-]);
-
-$b->addForward('header', [
-    _TYPE=>'view',
-    _PATH=>'header'
-]);
-
-class HELLO_APP extends Action
+class StaticApp extends Action
 {
     static function index($m, $f){
-       $go = $m['home'];
-       $go->set('data', ['text'=>' world---'.microtime()]);
-       return $go;
-    }
-
-    static function index_laziness($m,$f){
-        $go = $m['laze'];
-        $go->set('data', ['laze_text'=>'This is laziness']);
-        return $go;
-    }
-
-    static function ttfb($m, $f){
-       $go = $m['header'];
-       $go->action = 'ttfb-body';
-       $view = \PMVC\plug('view');
-       $view['ttfb'] = true;
-       $view->disable();
-       return $go;
-    }
-
-    static function ttfbBody($m, $f){
-       \PMVC\plug('view')->enable();
-       $go = $m['home'];
-       $go->set('data', ['text'=>' world---'.microtime()]);
-       return $go;
+        $staticRoot = \PMVC\getOption('staticRoot');
+        $app = \PMVC\plug(_RUN_APP);
+        $continue = true;
+        if (isset($f[0])) {
+            switch ($f[0]) {
+                case 'd':
+                    $app->dev($f); 
+                    $continue = false;
+                    break;
+                case 'c':
+                    $app->cdn($f);
+                    $continue = false;
+                    break;
+            }
+        }
+        if ($continue) {
+            $pUrl = \PMVC\plug('url');
+            $queryString = \PMVC\plug('getenv')->
+                get('QUERY_STRING');
+            $wholePath = $pUrl->getPath(). $queryString;
+            $url = $pUrl->getUrl($staticRoot);
+            $url->set($wholePath);
+            $result = (string)$url;
+            if (1>=strlen($url->getPath())) {
+                http_response_code(403); 
+                echo 'Please specific path.';
+                return;
+            } else {
+                readfile($result);
+            }
+        }
     }
 }
 
-class HelloVerify extends ActionForm 
-{
-    public function validate() {
-        return true;
-    }
-}
 
