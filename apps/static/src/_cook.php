@@ -20,17 +20,22 @@ class StaticCook
                 $caller->js($this->_splitPath());
                 break;
             default:
-                $caller->image($f);
+                $caller->image($this->_getRelatedPath(2));
                 break;
         }
     }
 
-    private function _splitPath()
+    private function _getRelatedPath($sliceFrom)
     {
         $rawPath = \PMVC\plug('url')->getPath(); 
         $paths = explode('/', $rawPath);
-        $paths = array_slice($paths, 3);
-        $cookPath = join('/', $paths);
+        $paths = array_slice($paths, $sliceFrom);
+        return join('/', $paths);
+    }
+
+    private function _splitPath()
+    {
+        $cookPath = $this->_getRelatedPath(3);
         $files = explode(';', $cookPath); 
         $tmpDir = $this->caller->get_source($files);
         $getFiles = glob($tmpDir.'*');
