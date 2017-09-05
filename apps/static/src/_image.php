@@ -23,7 +23,7 @@ class StaticImage
             $this->_header = [];
             return $old;
         }, 'tohtml');
-        \PMVC\plug(_ROUTER)->processHeader(
+        \PMVC\plug(\PMVC\getOption(_ROUTER))->processHeader(
             $this->_header
         );
         return readfile($imageUrl);

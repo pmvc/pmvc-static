@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd1f8254a21e171e4cdb287223ff135f",
+    "content-hash": "8ac7d65cad953e97787e0228dd89c25c",
     "packages": [
         {
             "name": "mouf/nodejs-installer",
@@ -136,22 +136,22 @@
             "time": "2017-08-10T03:09:18+00:00"
         },
         {
-            "name": "pmvc-plugin/cli",
-            "version": "0.7.20",
+            "name": "pmvc-plugin/cache_header",
+            "version": "0.1.12",
             "source": {
                 "type": "git",
-                "url": "https://github.com/pmvc-plugin/cli.git",
-                "reference": "cf7a9695dc4191ac4c97cece99cd0563693aab7b"
+                "url": "https://github.com/pmvc-plugin/cache_header.git",
+                "reference": "e759ec39708f6af9fbc156f7cd63aa7c63ff9489"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/cli/zipball/cf7a9695dc4191ac4c97cece99cd0563693aab7b",
-                "reference": "cf7a9695dc4191ac4c97cece99cd0563693aab7b",
+                "url": "https://api.github.com/repos/pmvc-plugin/cache_header/zipball/e759ec39708f6af9fbc156f7cd63aa7c63ff9489",
+                "reference": "e759ec39708f6af9fbc156f7cd63aa7c63ff9489",
                 "shasum": ""
             },
             "require": {
                 "pmvc-plugin/controller": "*",
-                "wp-cli/php-cli-tools": "*"
+                "pmvc/pmvc": "*"
             },
             "type": "library",
             "notification-url": "https://packagist.org/downloads/",
@@ -164,13 +164,16 @@
                     "email": "hill@kimo.com"
                 }
             ],
-            "description": "PMVC command line router",
+            "description": "A library help you setup http cache header",
+            "homepage": "https://github.com/pmvc-plugin/cache_header",
             "keywords": [
-                "cli",
+                "browser",
+                "cache",
+                "header",
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-09-05T05:46:59+00:00"
+            "time": "2017-09-05T07:21:49+00:00"
         },
         {
             "name": "pmvc-plugin/controller",
@@ -325,42 +328,6 @@
                 "pmvc"
             ],
             "time": "2017-08-07T03:46:16+00:00"
-        },
-        {
-            "name": "pmvc-plugin/default_forward",
-            "version": "0.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pmvc-plugin/default_forward.git",
-                "reference": "b9413d47f761fee12ba98be819d473b3448d55a3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/default_forward/zipball/b9413d47f761fee12ba98be819d473b3448d55a3",
-                "reference": "b9413d47f761fee12ba98be819d473b3448d55a3",
-                "shasum": ""
-            },
-            "require": {
-                "pmvc-plugin/controller": "*",
-                "pmvc-plugin/url": "*"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hill",
-                    "email": "hill@kimo.com"
-                }
-            ],
-            "description": "PMVC default forward (error, debug etc)",
-            "keywords": [
-                "plug-in",
-                "pmvc"
-            ],
-            "time": "2017-07-20T08:59:26+00:00"
         },
         {
             "name": "pmvc-plugin/dev",
@@ -818,16 +785,16 @@
         },
         {
             "name": "pmvc/heroku-config",
-            "version": "0.0.9",
+            "version": "0.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc/heroku-config.git",
-                "reference": "c2c7cd762bc3cfe7ad0335d3f0214a1e900b8821"
+                "reference": "7865f389b3b706776836a0075c36ede7818a6053"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc/heroku-config/zipball/c2c7cd762bc3cfe7ad0335d3f0214a1e900b8821",
-                "reference": "c2c7cd762bc3cfe7ad0335d3f0214a1e900b8821",
+                "url": "https://api.github.com/repos/pmvc/heroku-config/zipball/7865f389b3b706776836a0075c36ede7818a6053",
+                "reference": "7865f389b3b706776836a0075c36ede7818a6053",
                 "shasum": ""
             },
             "type": "library",
@@ -845,7 +812,7 @@
             "keywords": [
                 "heroku"
             ],
-            "time": "2017-09-05T18:49:14+00:00"
+            "time": "2017-09-05T20:04:51+00:00"
         },
         {
             "name": "pmvc/pmvc",
@@ -895,6 +862,84 @@
                 "pmvc"
             ],
             "time": "2017-09-05T07:13:30+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "pmvc-plugin/cli",
+            "version": "0.7.20",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmvc-plugin/cli.git",
+                "reference": "cf7a9695dc4191ac4c97cece99cd0563693aab7b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmvc-plugin/cli/zipball/cf7a9695dc4191ac4c97cece99cd0563693aab7b",
+                "reference": "cf7a9695dc4191ac4c97cece99cd0563693aab7b",
+                "shasum": ""
+            },
+            "require": {
+                "pmvc-plugin/controller": "*",
+                "wp-cli/php-cli-tools": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hill",
+                    "email": "hill@kimo.com"
+                }
+            ],
+            "description": "PMVC command line router",
+            "keywords": [
+                "cli",
+                "plug-in",
+                "pmvc"
+            ],
+            "time": "2017-09-05T05:46:59+00:00"
+        },
+        {
+            "name": "pmvc-plugin/debug_cli",
+            "version": "0.1.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/pmvc-plugin/debug_cli.git",
+                "reference": "537928c27384e03305d3de1b1359379207903ac0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/pmvc-plugin/debug_cli/zipball/537928c27384e03305d3de1b1359379207903ac0",
+                "reference": "537928c27384e03305d3de1b1359379207903ac0",
+                "shasum": ""
+            },
+            "require": {
+                "pmvc-plugin/cli": "*",
+                "pmvc-plugin/debug": "*",
+                "pmvc/pmvc": "*"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Hill",
+                    "email": "hill@kimo.com"
+                }
+            ],
+            "description": "PMVC debug output for command line ",
+            "keywords": [
+                "cli",
+                "debug",
+                "plug-in",
+                "pmvc"
+            ],
+            "time": "2017-03-02T05:19:57+00:00"
         },
         {
             "name": "wp-cli/php-cli-tools",
@@ -945,47 +990,6 @@
                 "console"
             ],
             "time": "2017-08-04T10:42:04+00:00"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "pmvc-plugin/debug_cli",
-            "version": "0.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pmvc-plugin/debug_cli.git",
-                "reference": "537928c27384e03305d3de1b1359379207903ac0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/debug_cli/zipball/537928c27384e03305d3de1b1359379207903ac0",
-                "reference": "537928c27384e03305d3de1b1359379207903ac0",
-                "shasum": ""
-            },
-            "require": {
-                "pmvc-plugin/cli": "*",
-                "pmvc-plugin/debug": "*",
-                "pmvc/pmvc": "*"
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Hill",
-                    "email": "hill@kimo.com"
-                }
-            ],
-            "description": "PMVC debug output for command line ",
-            "keywords": [
-                "cli",
-                "debug",
-                "plug-in",
-                "pmvc"
-            ],
-            "time": "2017-03-02T05:19:57+00:00"
         }
     ],
     "aliases": [],

@@ -63,7 +63,7 @@ class StaticApp extends Action
                     $header = [];
                     return $old;
                 }, 'tohtml');
-                \PMVC\plug(_ROUTER)->processHeader(
+                \PMVC\plug(\PMVC\getOption(_ROUTER))->processHeader(
                     $header
                 );
                 readfile($result);

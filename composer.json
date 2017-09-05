@@ -5,17 +5,17 @@
         "pmvc-plugin/http": "*",
         "pmvc-plugin/tmp": "*",
         "pmvc-plugin/controller": "*",
-        "pmvc-plugin/cli": "*",
         "pmvc-plugin/dispatcher": "*",
         "pmvc-plugin/dotenv": "*",
         "pmvc-plugin/dev": "*",
         "pmvc-plugin/error": "*",
         "pmvc-plugin/debug": "*",
         "pmvc-plugin/debug_console": "*",
-        "pmvc-plugin/default_forward": "*",
+        "pmvc-plugin/cache_header": "*",
         "mouf/nodejs-installer": "~1.0"
     },
     "require-dev": {
+        "pmvc-plugin/cli": "*",
         "pmvc-plugin/debug_cli": "*"
     }
 
