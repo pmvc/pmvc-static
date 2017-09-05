@@ -14,14 +14,11 @@ class StaticCook
         $caller = $this->caller;
         switch ($type) {
             case 'css':
-                $caller->css($this->_splitPath());
-                break;
+                return $caller->css($this->_splitPath());
             case 'js':
-                $caller->js($this->_splitPath());
-                break;
+                return $caller->js($this->_splitPath());
             default:
-                $caller->image($this->_getRelatedPath(2));
-                break;
+                return $caller->image($this->_getRelatedPath(2));
         }
     }
 

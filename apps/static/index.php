@@ -55,7 +55,17 @@ class StaticApp extends Action
                     return [$result, $staticRoot]; 
                 }, 'source');
                 $fileInfo = \PMVC\plug('file_info')->path($result);
-                header('Content-Type: '.$fileInfo->getContentType());
+                $header = [
+                    'Content-Type: '.$fileInfo->getContentType()
+                ];
+                \PMVC\dev(function() use (&$header){
+                    $old = $header;
+                    $header = [];
+                    return $old;
+                }, 'tohtml');
+                \PMVC\plug(_ROUTER)->processHeader(
+                    $header
+                );
                 readfile($result);
             }
         }
