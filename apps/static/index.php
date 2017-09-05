@@ -20,7 +20,7 @@ $b->addAction('index', [
 class StaticApp extends Action
 {
     static function index($m, $f){
-        $staticRoot = \PMVC\getOption('staticRoot');
+        $staticRoot = \PMVC\plug('get')->get('staticRoot');
         $app = \PMVC\plug(_RUN_APP);
         $continue = true;
         if (isset($f[0])) {

@@ -17,14 +17,10 @@ class ReactAppTest extends PHPUnit_Framework_TestCase
             ,'error'=>null
             ,'debug'=>['output'=>'debug_cli']
             ,'dotenv'=>['.env.sample']
-            ,'app_action_router'=>null
-            ,'view_react'=>[
-                'NODEJS'=>'vendor/bin/node'
-            ]
+            ,'http'=>null
         ]);
         $controller = \PMVC\plug('controller',[
-            _RUN_APPS=>'apps'
-            ,_TEMPLATE_DIR=>'vendor/pmvc-theme/hello_react'
+            _RUN_APPS => __DIR__.'/../apps' 
         ]);
         if($controller->plugApp()){
             ob_start();
@@ -32,6 +28,6 @@ class ReactAppTest extends PHPUnit_Framework_TestCase
             $output = ob_get_contents();
             ob_end_clean();
         }
-        $this->assertContains('data-reactid',$output);
+        $this->assertContains('Please specific path.',$output);
     }
 }

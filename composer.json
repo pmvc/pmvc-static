@@ -14,6 +14,9 @@
         "pmvc-plugin/debug_console": "*",
         "pmvc-plugin/default_forward": "*",
         "mouf/nodejs-installer": "~1.0"
+    },
+    "require-dev": {
+        "pmvc-plugin/debug_cli": "*"
     }
 
 }

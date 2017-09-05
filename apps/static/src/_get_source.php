@@ -8,7 +8,7 @@ class GetSource
 {
     function __invoke($files)
     {
-        $staticRoot = \PMVC\getOption('staticRoot');
+        $staticRoot = \PMVC\plug('get')->get('staticRoot');
         $pTmp = \PMVC\plug('tmp');
         $fInfo = \PMVC\plug('file_info');
         $tmpDir = $pTmp->dir();

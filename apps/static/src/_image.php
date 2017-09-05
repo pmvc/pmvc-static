@@ -8,13 +8,13 @@ class StaticImage
 {
     function __invoke($relatedPath)
     {
-        $imageMiddleware = \PMVC\getOption(
-            'imageMiddleware'
-        );
+        $imageMiddleware = \PMVC\plug('get')->
+            get('imageMiddlewareUri');
         $imageUrl = \PMVC\plug('url')->
             getUrl($imageMiddleware)->
             set($relatedPath);
-        header('Content-type: image/jpeg');
+        $fileInfo = \PMVC\plug('file_info')->path($relatedPath);
+        header('Content-type: '.$fileInfo->getContentType());
         $int = readfile($imageUrl);
     }
 }

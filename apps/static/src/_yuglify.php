@@ -9,7 +9,7 @@ class YUglify
     function __invoke($files)
     {
         $tmpFile = \PMVC\plug('tmp')->file();
-        $nodeJs = \PMVC\getOption('nodeJs');
+        $nodeJs = \PMVC\value(\PMVC\getOption('PLUGIN'), ['view', 'react', 'NODEJS']);
         $yuglify = \PMVC\getOption('yuglify');
         $cmd = join(' ', [
             $nodeJs,
