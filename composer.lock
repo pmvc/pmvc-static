@@ -519,16 +519,16 @@
         },
         {
             "name": "pmvc-plugin/file_info",
-            "version": "0.1.1",
+            "version": "0.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/file_info.git",
-                "reference": "f3afda5ef4e0c7446ada0cb56c50f934deb9e6bc"
+                "reference": "1ba5fb86ebd8fb2f3043567b7aae84f2c5906ae5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/file_info/zipball/f3afda5ef4e0c7446ada0cb56c50f934deb9e6bc",
-                "reference": "f3afda5ef4e0c7446ada0cb56c50f934deb9e6bc",
+                "url": "https://api.github.com/repos/pmvc-plugin/file_info/zipball/1ba5fb86ebd8fb2f3043567b7aae84f2c5906ae5",
+                "reference": "1ba5fb86ebd8fb2f3043567b7aae84f2c5906ae5",
                 "shasum": ""
             },
             "require": {
@@ -551,7 +551,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-09-05T14:29:25+00:00"
+            "time": "2017-09-05T18:38:30+00:00"
         },
         {
             "name": "pmvc-plugin/file_list",
@@ -818,16 +818,16 @@
         },
         {
             "name": "pmvc/heroku-config",
-            "version": "0.0.8",
+            "version": "0.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc/heroku-config.git",
-                "reference": "5177b4b284756165302fe7099e092d360c7b4725"
+                "reference": "c2c7cd762bc3cfe7ad0335d3f0214a1e900b8821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc/heroku-config/zipball/5177b4b284756165302fe7099e092d360c7b4725",
-                "reference": "5177b4b284756165302fe7099e092d360c7b4725",
+                "url": "https://api.github.com/repos/pmvc/heroku-config/zipball/c2c7cd762bc3cfe7ad0335d3f0214a1e900b8821",
+                "reference": "c2c7cd762bc3cfe7ad0335d3f0214a1e900b8821",
                 "shasum": ""
             },
             "type": "library",
@@ -845,7 +845,7 @@
             "keywords": [
                 "heroku"
             ],
-            "time": "2017-09-05T15:19:29+00:00"
+            "time": "2017-09-05T18:49:14+00:00"
         },
         {
             "name": "pmvc/pmvc",
