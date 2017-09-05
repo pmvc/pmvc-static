@@ -1,7 +1,6 @@
 <?php
 
 include_once('../vendor/autoload.php');
-
 \PMVC\Load::plug([
     'controller'=>null
     ,'dispatcher'=>null
@@ -10,7 +9,7 @@ include_once('../vendor/autoload.php');
     ,'debug'=>null
     ,'dotenv'=>[(is_file('../.env.pmvc')? '../.env.pmvc' : '../.env.sample')]
     ,'http'=>null
-    ,'get'=>['order'=>'getenv']
+    ,'get'=>['order'=>['getenv']]
 ]);
 
 $controller = \PMVC\plug('controller');

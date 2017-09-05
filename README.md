@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/pmvc/react-pmvc.svg?branch=master)](https://travis-ci.org/pmvc/react-pmvc)
 
-PMVC integrate with react.js demo code 
+PMVC static host use with heroku or dokku 
 ===============
 
 ## Heroku or Dokku setting

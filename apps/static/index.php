@@ -39,11 +39,9 @@ class StaticApp extends Action
             $pUrl = \PMVC\plug('url');
             $queryString = \PMVC\plug('getenv')->
                 get('QUERY_STRING');
-            $pathAndQuery = 
-                $pUrl->getPath().
-                $queryString;
             $url = $pUrl->getUrl($staticRoot);
-            $url->set($pathAndQuery);
+            $url->set($pUrl->getPath());
+            $url->query($queryString); 
             $result = (string)$url;
             $checkPath = $url->getPath();
             if ( 1 >= strlen($checkPath) ||
@@ -53,6 +51,9 @@ class StaticApp extends Action
                 echo 'Please specific path.';
                 return;
             } else {
+                \PMVC\dev(function() use ($result, $staticRoot){
+                    return [$result, $staticRoot]; 
+                }, 'source');
                 $fileInfo = \PMVC\plug('file_info')->path($result);
                 header('Content-Type: '.$fileInfo->getContentType());
                 readfile($result);
