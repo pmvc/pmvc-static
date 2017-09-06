@@ -255,16 +255,16 @@
         },
         {
             "name": "pmvc-plugin/debug",
-            "version": "0.3.26",
+            "version": "0.3.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/debug.git",
-                "reference": "0687dbe1b3a8e8a1d2a2d6fa0e8c6cc170efcbd8"
+                "reference": "fc87cf72c08dc232fc76e9a96f03b32afafc7592"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/debug/zipball/0687dbe1b3a8e8a1d2a2d6fa0e8c6cc170efcbd8",
-                "reference": "0687dbe1b3a8e8a1d2a2d6fa0e8c6cc170efcbd8",
+                "url": "https://api.github.com/repos/pmvc-plugin/debug/zipball/fc87cf72c08dc232fc76e9a96f03b32afafc7592",
+                "reference": "fc87cf72c08dc232fc76e9a96f03b32afafc7592",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +289,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-09-05T04:24:28+00:00"
+            "time": "2017-09-06T03:27:44+00:00"
         },
         {
             "name": "pmvc-plugin/debug_console",
@@ -816,16 +816,16 @@
         },
         {
             "name": "pmvc/pmvc",
-            "version": "0.7.152",
+            "version": "0.7.154",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc/pmvc.git",
-                "reference": "0e86a24161b143793e41e94a5464b8edbce269a7"
+                "reference": "c781c473924c735b086772646e27634af8d4e7f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc/pmvc/zipball/0e86a24161b143793e41e94a5464b8edbce269a7",
-                "reference": "0e86a24161b143793e41e94a5464b8edbce269a7",
+                "url": "https://api.github.com/repos/pmvc/pmvc/zipball/c781c473924c735b086772646e27634af8d4e7f9",
+                "reference": "c781c473924c735b086772646e27634af8d4e7f9",
                 "shasum": ""
             },
             "require": {
@@ -861,7 +861,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-09-05T07:13:30+00:00"
+            "time": "2017-09-06T07:30:25+00:00"
         }
     ],
     "packages-dev": [
