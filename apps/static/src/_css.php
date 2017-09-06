@@ -12,6 +12,8 @@ class StaticCss
         $tmpFile = $this->caller->yuglify($getFiles);
         $minFile = $tmpFile.'.min.css';
         \PMVC\dev(function(){
+            \PMVC\plug('cache_header')
+                ->noCache();
             $old = $this->_header;
             $this->_header = [];
             return $old;

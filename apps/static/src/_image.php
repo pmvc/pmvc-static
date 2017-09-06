@@ -19,6 +19,8 @@ class StaticImage
         $fileInfo = \PMVC\plug('file_info')->path($relatedPath);
         $this->_header[] = 'Content-type: '.$fileInfo->getContentType();
         \PMVC\dev(function(){
+            \PMVC\plug('cache_header')
+                ->noCache();
             $old = $this->_header;
             $this->_header = [];
             return $old;

@@ -52,6 +52,8 @@ class StaticApp extends Action
                 return;
             } else {
                 \PMVC\dev(function() use ($result, $staticRoot){
+                    \PMVC\plug('cache_header')
+                        ->noCache();
                     return [$result, $staticRoot]; 
                 }, 'source');
                 $fileInfo = \PMVC\plug('file_info')->path($result);
@@ -59,6 +61,8 @@ class StaticApp extends Action
                     'Content-Type: '.$fileInfo->getContentType()
                 ];
                 \PMVC\dev(function() use (&$header){
+                    \PMVC\plug('cache_header')
+                        ->noCache();
                     $old = $header;
                     $header = [];
                     return $old;
