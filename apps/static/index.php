@@ -70,7 +70,9 @@ class StaticApp extends Action
                 \PMVC\plug(\PMVC\getOption(_ROUTER))->processHeader(
                     $header
                 );
-                readfile($result);
+                if (!empty($header)) {
+                    readfile($result);
+                }
             }
         }
     }
