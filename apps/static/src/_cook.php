@@ -13,9 +13,9 @@ class StaticCook
         $type = $f[1];
         $caller = $this->caller;
         switch ($type) {
-            case 'css':
+            case 'c':
                 return $caller->css($this->_splitPath());
-            case 'js':
+            case 'j':
                 return $caller->js($this->_splitPath());
             default:
                 return $caller->image($this->_getRelatedPath(2));
