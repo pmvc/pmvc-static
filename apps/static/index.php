@@ -67,10 +67,11 @@ class StaticApp extends Action
                     $header = [];
                     return $old;
                 }, 'tohtml');
-                \PMVC\plug(\PMVC\getOption(_ROUTER))->processHeader(
-                    $header
-                );
                 if (!empty($header)) {
+                    \PMVC\plug(\PMVC\getOption(_ROUTER))
+                        ->processHeader($header);
+                    \PMVC\plug('cache_header')->
+                        publicCache(86400*365*10, true);
                     readfile($result);
                 }
             }

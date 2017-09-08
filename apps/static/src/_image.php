@@ -25,9 +25,10 @@ class StaticImage
             $this->_header = [];
             return $old;
         }, 'tohtml');
-        \PMVC\plug(\PMVC\getOption(_ROUTER))->processHeader(
-            $this->_header
-        );
-        return readfile($imageUrl);
+        if (!empty($this->_header)) {
+            \PMVC\plug(\PMVC\getOption(_ROUTER))
+                ->processHeader($this->_header);
+            return readfile($imageUrl);
+        }
     }
 }
