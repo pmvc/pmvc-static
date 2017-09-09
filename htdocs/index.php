@@ -18,4 +18,5 @@ if($controller->plugApp([], [
     'd'=>'static'
 ])){
     $controller->process();
+    exit();
 }

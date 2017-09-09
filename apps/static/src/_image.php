@@ -29,6 +29,8 @@ class StaticImage
             \PMVC\plug(\PMVC\getOption(_ROUTER))
                 ->processHeader($this->_header);
             return readfile($imageUrl);
+        } else {
+            return false;
         }
     }
 }

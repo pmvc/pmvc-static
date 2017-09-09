@@ -331,16 +331,16 @@
         },
         {
             "name": "pmvc-plugin/dev",
-            "version": "0.1.25",
+            "version": "0.1.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/dev.git",
-                "reference": "c5468ca248a6a133c6f50e75174ce1d11791026c"
+                "reference": "8a7115e1b9f407848f02344e6076669505ee96f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/dev/zipball/c5468ca248a6a133c6f50e75174ce1d11791026c",
-                "reference": "c5468ca248a6a133c6f50e75174ce1d11791026c",
+                "url": "https://api.github.com/repos/pmvc-plugin/dev/zipball/8a7115e1b9f407848f02344e6076669505ee96f6",
+                "reference": "8a7115e1b9f407848f02344e6076669505ee96f6",
                 "shasum": ""
             },
             "require": {
@@ -368,7 +368,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-09-05T04:41:39+00:00"
+            "time": "2017-09-09T14:44:12+00:00"
         },
         {
             "name": "pmvc-plugin/dispatcher",
@@ -672,16 +672,16 @@
         },
         {
             "name": "pmvc-plugin/tmp",
-            "version": "0.1.3",
+            "version": "0.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/tmp.git",
-                "reference": "312ed7e82e4a57626f910ceae880ae17b57d1b16"
+                "reference": "0805c4c2d3b862c92688e41b71955ce037a044a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/tmp/zipball/312ed7e82e4a57626f910ceae880ae17b57d1b16",
-                "reference": "312ed7e82e4a57626f910ceae880ae17b57d1b16",
+                "url": "https://api.github.com/repos/pmvc-plugin/tmp/zipball/0805c4c2d3b862c92688e41b71955ce037a044a6",
+                "reference": "0805c4c2d3b862c92688e41b71955ce037a044a6",
                 "shasum": ""
             },
             "require": {
@@ -705,7 +705,7 @@
                 "pmvc",
                 "temp"
             ],
-            "time": "2016-07-10T10:48:17+00:00"
+            "time": "2017-09-10T10:54:48+00:00"
         },
         {
             "name": "pmvc-plugin/underscore",
@@ -785,16 +785,16 @@
         },
         {
             "name": "pmvc/heroku-config",
-            "version": "0.0.26",
+            "version": "0.0.27",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc/heroku-config.git",
-                "reference": "2058560af53aaf3533ddfdf1e0a9f082284b03e5"
+                "reference": "6ca314995e9a0ea4b481037a90195d524b219eff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc/heroku-config/zipball/2058560af53aaf3533ddfdf1e0a9f082284b03e5",
-                "reference": "2058560af53aaf3533ddfdf1e0a9f082284b03e5",
+                "url": "https://api.github.com/repos/pmvc/heroku-config/zipball/6ca314995e9a0ea4b481037a90195d524b219eff",
+                "reference": "6ca314995e9a0ea4b481037a90195d524b219eff",
                 "shasum": ""
             },
             "type": "library",
@@ -812,7 +812,7 @@
             "keywords": [
                 "heroku"
             ],
-            "time": "2017-09-08T04:35:39+00:00"
+            "time": "2017-09-09T15:32:19+00:00"
         },
         {
             "name": "pmvc/pmvc",

@@ -9,16 +9,41 @@ class YUglify
     function __invoke($files)
     {
         $tmpFile = \PMVC\plug('tmp')->file();
-        $nodeJs = \PMVC\value(\PMVC\getOption('PLUGIN'), ['view', 'react', 'NODEJS']);
-        $yuglify = \PMVC\getOption('yuglify');
-        $cmd = join(' ', [
-            $nodeJs,
-            $yuglify,
-            join(' ', $files),
-            '-c',
-            $tmpFile
-        ]);
-        $run = shell_exec($cmd);
+        $nodeJs = \PMVC\realpath(\PMVC\value(\PMVC\getOption('PLUGIN'), ['view', 'react', 'NODEJS']));
+        $yuglify = \PMVC\realpath(\PMVC\getOption('yuglify'));
+        $cmd = join (
+            ' ',
+            [
+                $nodeJs,
+                $yuglify,
+                join(' ', $files),
+                '-c',
+                $tmpFile,
+                '>',
+                '/dev/null'
+            ]
+        );
+        $this->_shell($cmd);
+        \PMVC\dev(function() use ($cmd) {
+            return [$cmd]; 
+        }, 'yuglify');
+        
         return $tmpFile;
+    }
+
+    private function _shell($command)
+    {
+        $proc = proc_open($command, [ 
+            ['pipe','r'],
+            ['pipe','w'],
+            ['pipe','a']
+        ], $pipes);
+        $result = null;
+        if (is_resource($proc)) {
+            fclose($pipes[0]);
+            fclose($pipes[1]);
+            proc_close($proc);
+        }
+        return $result;
     }
 }

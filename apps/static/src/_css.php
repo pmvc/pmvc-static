@@ -9,8 +9,6 @@ class StaticCss
     private $_header = ['Content-type: text/css'];
     function __invoke($getFiles)
     {
-        $tmpFile = $this->caller->yuglify($getFiles);
-        $minFile = $tmpFile.'.min.css';
         \PMVC\dev(function(){
             \PMVC\plug('cache_header')
                 ->noCache();
@@ -18,9 +16,13 @@ class StaticCss
             $this->_header = [];
             return $old;
         }, 'tohtml');
-        \PMVC\plug(\PMVC\getOption(_ROUTER))->processHeader(
-            $this->_header
-        );
+        $tmpFile = $this->caller->yuglify($getFiles);
+        $minFile = $tmpFile.'.min.css';
+        if (!filesize($minFile)) {
+            return false;
+        }
+        \PMVC\plug(\PMVC\getOption(_ROUTER))
+            ->processHeader( $this->_header );
         return readfile($minFile);
     }
 }

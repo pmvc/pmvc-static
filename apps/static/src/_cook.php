@@ -14,9 +14,9 @@ class StaticCook
         $caller = $this->caller;
         switch ($type) {
             case 'c':
-                return $caller->css($this->_splitPath());
+                return $caller->css($this->_splitPath('css'));
             case 'j':
-                return $caller->js($this->_splitPath());
+                return $caller->js($this->_splitPath('js'));
             default:
                 return $caller->image($this->_getRelatedPath(2));
         }
@@ -30,12 +30,12 @@ class StaticCook
         return join('/', $paths);
     }
 
-    private function _splitPath()
+    private function _splitPath($type)
     {
         $cookPath = $this->_getRelatedPath(3);
         $files = explode(';', $cookPath); 
         $tmpDir = $this->caller->get_source($files);
-        $getFiles = glob($tmpDir.'*');
+        $getFiles = glob($tmpDir.'*.'.$type);
         return $getFiles;
     }
 }
