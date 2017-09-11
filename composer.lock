@@ -100,16 +100,16 @@
         },
         {
             "name": "pmvc-plugin/asset",
-            "version": "0.1.4",
+            "version": "0.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/asset.git",
-                "reference": "847aeff8236e99c4627abaaa714df2ee16a3d72b"
+                "reference": "70d9eac2473e2f55d1759d068f9330ee02581b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/asset/zipball/847aeff8236e99c4627abaaa714df2ee16a3d72b",
-                "reference": "847aeff8236e99c4627abaaa714df2ee16a3d72b",
+                "url": "https://api.github.com/repos/pmvc-plugin/asset/zipball/70d9eac2473e2f55d1759d068f9330ee02581b11",
+                "reference": "70d9eac2473e2f55d1759d068f9330ee02581b11",
                 "shasum": ""
             },
             "require": {
@@ -133,7 +133,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-08-10T03:09:18+00:00"
+            "time": "2017-09-11T07:23:16+00:00"
         },
         {
             "name": "pmvc-plugin/cache_header",
@@ -255,16 +255,16 @@
         },
         {
             "name": "pmvc-plugin/debug",
-            "version": "0.3.27",
+            "version": "0.3.28",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/debug.git",
-                "reference": "fc87cf72c08dc232fc76e9a96f03b32afafc7592"
+                "reference": "fcbf8d530eff40ec50a0e1e8fe86e30febd035b8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/debug/zipball/fc87cf72c08dc232fc76e9a96f03b32afafc7592",
-                "reference": "fc87cf72c08dc232fc76e9a96f03b32afafc7592",
+                "url": "https://api.github.com/repos/pmvc-plugin/debug/zipball/fcbf8d530eff40ec50a0e1e8fe86e30febd035b8",
+                "reference": "fcbf8d530eff40ec50a0e1e8fe86e30febd035b8",
                 "shasum": ""
             },
             "require": {
@@ -289,7 +289,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-09-06T03:27:44+00:00"
+            "time": "2017-09-11T14:19:26+00:00"
         },
         {
             "name": "pmvc-plugin/debug_console",

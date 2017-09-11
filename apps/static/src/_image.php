@@ -18,12 +18,10 @@ class StaticImage
             set($relatedPath);
         $fileInfo = \PMVC\plug('file_info')->path($relatedPath);
         $this->_header[] = 'Content-type: '.$fileInfo->getContentType();
-        \PMVC\dev(function(){
-            \PMVC\plug('cache_header')
-                ->noCache();
+        \PMVC\dev(function() use ($imageUrl) {
             $old = $this->_header;
             $this->_header = [];
-            return $old;
+            return [$old, $imageUrl];
         }, 'tohtml');
         if (!empty($this->_header)) {
             \PMVC\plug(\PMVC\getOption(_ROUTER))

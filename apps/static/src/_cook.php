@@ -35,6 +35,9 @@ class StaticCook
         $cookPath = $this->_getRelatedPath(3);
         $files = explode(';', $cookPath); 
         $tmpDir = $this->caller->get_source($files);
+        if (empty($tmpDir)) {
+            return false;
+        }
         $getFiles = glob($tmpDir.'*.'.$type);
         return $getFiles;
     }

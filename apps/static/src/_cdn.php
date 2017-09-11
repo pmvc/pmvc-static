@@ -13,7 +13,7 @@ class StaticCdn
         $cacheHeader = \PMVC\plug('cache_header');
         $cacheHeader->publicCache(86400*365*10, true);
         $result = $this->caller->cook($f);
-        if (false === $result) {
+        if (false === $result && !headers_sent()) {
             http_response_code(500);
             $cacheHeader->noCache();
         }
