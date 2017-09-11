@@ -9,9 +9,10 @@ class StaticJs
     private $_header = ['Content-type: application/javascript'];
     function __invoke($getFiles)
     {
+        if (empty($getFiles)) {
+            return false;
+        }
         \PMVC\dev(function(){
-            \PMVC\plug('cache_header')
-                ->noCache();
             $old = $this->_header;
             $this->_header = [];
             return $old;

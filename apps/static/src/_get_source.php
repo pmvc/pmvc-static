@@ -25,6 +25,7 @@ class GetSource
                 file_put_contents($new, $content);
             } else {
                 echo $content;
+                return false;
             }
         }
         return $tmpDir;

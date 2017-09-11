@@ -18,17 +18,19 @@ class StaticImage
             set($relatedPath);
         $fileInfo = \PMVC\plug('file_info')->path($relatedPath);
         $this->_header[] = 'Content-type: '.$fileInfo->getContentType();
-        \PMVC\dev(function(){
-            \PMVC\plug('cache_header')
-                ->noCache();
+        \PMVC\dev(function() use ($imageUrl, $imageMiddleware, $relatedPath) {
             $old = $this->_header;
             $this->_header = [];
-            return $old;
+            return ['header'=>$old, 'middleware'=>[
+                'finial'=>(string)$imageUrl,
+                'middlewareHost'=>$imageMiddleware,
+                'relatePath'=>$relatedPath
+            ]];
         }, 'tohtml');
         if (!empty($this->_header)) {
             \PMVC\plug(\PMVC\getOption(_ROUTER))
                 ->processHeader($this->_header);
-            return readfile($imageUrl);
+            return readfile((string)$imageUrl);
         } else {
             return false;
         }
