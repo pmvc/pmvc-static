@@ -10,6 +10,8 @@ class StaticDev
 {
     function __invoke(ActionForm $f)
     {
+        \PMVC\plug('cache_header')->
+            noCache();
         $this->caller->cook($f);
     }
 }
