@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pmvc/react-pmvc.svg?branch=master)](https://travis-ci.org/pmvc/react-pmvc)
+[![Build Status](https://travis-ci.org/pmvc/pmvc-static.svg?branch=master)](https://travis-ci.org/pmvc/pmvc-static)
 
 PMVC static host use with heroku or dokku 
 ===============
