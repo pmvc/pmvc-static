@@ -7,7 +7,7 @@ include_once('../vendor/autoload.php');
     ,'error'=>['all']
     ,'dev'=>null
     ,'debug'=>null
-    ,'dotenv'=>[(is_file('../.env.pmvc')? '../.env.pmvc': null)]
+    ,'dotenv'=>[(is_file('../.env.pmvc')? '../.env.pmvc': '../.env.sample')]
     ,'http'=>null
     ,'get'=>['order'=>['getenv']]
 ]);
