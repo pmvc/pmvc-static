@@ -20,7 +20,8 @@ class ReactAppTest extends PHPUnit_Framework_TestCase
             ,'http'=>null
         ]);
         $controller = \PMVC\plug('controller',[
-            _RUN_APPS => __DIR__.'/../apps' 
+            _RUN_APPS => __DIR__.'/../apps', 
+            'staticRoot'=>null
         ]);
         if($controller->plugApp()){
             ob_start();
