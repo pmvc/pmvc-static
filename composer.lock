@@ -563,16 +563,16 @@
         },
         {
             "name": "pmvc-plugin/get",
-            "version": "0.1.7",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/get.git",
-                "reference": "b2d2ede38e79d9e61211edce97de9711587bfdbf"
+                "reference": "34306a774b62e95b3eed0f35c69b591be95761c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/get/zipball/b2d2ede38e79d9e61211edce97de9711587bfdbf",
-                "reference": "b2d2ede38e79d9e61211edce97de9711587bfdbf",
+                "url": "https://api.github.com/repos/pmvc-plugin/get/zipball/34306a774b62e95b3eed0f35c69b591be95761c2",
+                "reference": "34306a774b62e95b3eed0f35c69b591be95761c2",
                 "shasum": ""
             },
             "require": {
@@ -595,7 +595,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-09-05T14:15:00+00:00"
+            "time": "2018-02-14T20:28:01+00:00"
         },
         {
             "name": "pmvc-plugin/getenv",
