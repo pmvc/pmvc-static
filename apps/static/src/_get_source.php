@@ -14,11 +14,14 @@ class GetSource
         $tmpDir = $pTmp->dir();
         $files = array_unique($files);
         foreach ($files as $f) {
+            if (empty($f)) {
+                continue;
+            }
             ob_start();
-            $isOk = readfile($staticRoot.$f);
+            $isOK = readfile($staticRoot.$f);
             $content = ob_get_contents();
             ob_end_clean();
-            if ($isOk) {
+            if ($isOK) {
                 $new = tempnam($tmpDir, '_').
                     '.'.
                     $fInfo->path($f)->
@@ -26,6 +29,10 @@ class GetSource
                 file_put_contents($new, $content);
             } else {
                 echo $content;
+                trigger_error(json_encode(['Error'=>'Get source file failed.', 'Params'=>[
+                    'OK'=>$isOK,
+                    'files'=>$files,
+                ]]));
                 return false;
             }
         }
