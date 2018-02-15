@@ -11,7 +11,7 @@ dokku config:set [app name] staticRoot=[specific path]
 * path could be an uri or local file path 
 
 ## URI Spec
-/{c,d}/{c,j,other}/lib/semantic-ui/2.2.2/button.css
+/{c,d}/{c,j,other}/your_file_path
 * First level
    * c -> cdn
    * d -> develop mode
