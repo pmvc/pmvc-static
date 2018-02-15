@@ -3,6 +3,7 @@
 namespace PMVC\App\static_app;
 
 use PMVC\ActionForm;
+use LengthException;
 
 ${_INIT_CONFIG}[_CLASS] = __NAMESPACE__.'\StaticCook';
 
@@ -33,7 +34,11 @@ class StaticCook
     private function _splitPath($type)
     {
         $cookPath = $this->_getRelatedPath(3);
+        $maxCombo = \PMVC\plug('get')->get('staticMaxCombo', 5);
         $files = explode(';', $cookPath); 
+        if (count($files) > $maxCombo) {
+            throw new LengthException('Combo too many files. ['.$maxCombo.']');
+        }
         $tmpDir = $this->caller->get_source($files);
         if (empty($tmpDir)) {
             return false;

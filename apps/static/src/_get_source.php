@@ -2,24 +2,17 @@
 
 namespace PMVC\App\static_app;
 
-use LengthException;
-
 ${_INIT_CONFIG}[_CLASS] = __NAMESPACE__.'\GetSource';
 
 class GetSource
 {
     function __invoke($files)
     {
-        $pGet = \PMVC\plug('get');
-        $staticRoot = $pGet->get('staticRoot');
-        $maxCombo = $pGet->get('staticMaxCombo', 5);
+        $staticRoot = \PMVC\plug('get')->get('staticRoot');
         $pTmp = \PMVC\plug('tmp');
         $fInfo = \PMVC\plug('file_info');
         $tmpDir = $pTmp->dir();
         $files = array_unique($files);
-        if (count($files) > $maxCombo) {
-            throw new LengthException('Combo too many files. ['.$maxCombo.']');
-        }
         foreach ($files as $f) {
             ob_start();
             $isOk = readfile($staticRoot.$f);
