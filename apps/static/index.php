@@ -19,15 +19,14 @@ $b->addAction('index', [
 
 class StaticApp extends Action
 {
-    public $isDev = false;
     static function index($m, $f){
         $staticRoot = \PMVC\plug('get')->get('staticRoot');
-        $app = \PMVC\plug(_RUN_APP);
+        $app = \PMVC\plug(_RUN_APP, ['isDev'=>false]);
         $continue = true;
         if (isset($f[0])) {
             switch ($f[0]) {
                 case 'd':
-                    $app->isDev = true;
+                    $app['isDev'] = true;
                     $app->dev($f); 
                     $continue = false;
                     break;

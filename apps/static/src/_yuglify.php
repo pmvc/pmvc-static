@@ -10,7 +10,7 @@ class YUglify
     {
         $tmpFile = \PMVC\plug('tmp')->file();
         $joinFiles = join(' ', $files);
-        if ($this->caller->isDev) {
+        if ($this->caller['isDev']) {
             $cmdArray = [
                 'cat',
                 $joinFiles,
