@@ -18,7 +18,11 @@ class StaticCss
             return $old;
         }, 'tohtml');
         $tmpFile = $this->caller->yuglify($getFiles);
-        $minFile = $tmpFile.'.min.css';
+        $minFile = $tmpFile;
+        if (!$this->caller->isDev) {
+            $minFile .= '.min.css';
+        }
+        clearstatcache();
         if (!filesize($minFile)) {
             return false;
         }

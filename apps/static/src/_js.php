@@ -18,7 +18,11 @@ class StaticJs
             return $old;
         }, 'tohtml');
         $tmpFile = $this->caller->yuglify($getFiles);
-        $minFile = $tmpFile.'.min.js';
+        $minFile = $tmpFile;
+        if (!$this->caller->isDev) {
+            $minFile .= '.min.js';
+        }
+        clearstatcache();
         if (!filesize($minFile)) {
             return false;
         }

@@ -12,7 +12,6 @@ class StaticDev
     {
         \PMVC\plug('cache_header')->
             noCache();
-        \PMVC\plug('getenv',['isDev'=>1]);
         $this->caller->cook($f);
     }
 }

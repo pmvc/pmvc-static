@@ -9,20 +9,28 @@ class YUglify
     function __invoke($files)
     {
         $tmpFile = \PMVC\plug('tmp')->file();
-        $nodeJs = \PMVC\realpath(\PMVC\value(\PMVC\getOption('PLUGIN'), ['view', 'react', 'NODEJS']));
-        $yuglify = \PMVC\realpath(\PMVC\getOption('yuglify'));
-        $cmd = join (
-            ' ',
-            [
+        $joinFiles = join(' ', $files);
+        if ($this->caller->isDev) {
+            $cmdArray = [
+                'cat',
+                $joinFiles,
+                '>',
+                $tmpFile
+            ];
+        } else {
+            $nodeJs = \PMVC\realpath(\PMVC\value(\PMVC\getOption('PLUGIN'), ['view', 'react', 'NODEJS']));
+            $yuglify = \PMVC\realpath(\PMVC\getOption('yuglify'));
+            $cmdArray = [
                 $nodeJs,
                 $yuglify,
-                join(' ', $files),
+                $joinFiles,
                 '-c',
                 $tmpFile,
                 '>',
                 '/dev/null'
-            ]
-        );
+            ];
+        }
+        $cmd = join(' ', $cmdArray);
         $this->_shell($cmd);
         \PMVC\dev(function() use ($cmd) {
             return [$cmd]; 
