@@ -39,7 +39,10 @@ class StaticCook
         if (count($files) > $maxCombo) {
             throw new LengthException('Combo too many files. ['.$maxCombo.']');
         }
-        $tmpDir = $this->caller->get_source($files);
+        $tmpDir = $this->caller->get_source(
+            $files,
+            $type
+        );
         if (empty($tmpDir)) {
             return false;
         }
