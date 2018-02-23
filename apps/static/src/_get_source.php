@@ -19,12 +19,14 @@ class GetSource
             }
             $ext = $fInfo->path($f)->getExt();
             ob_start();
-            $isOK = readfile($staticRoot.$f);
+            $source = $staticRoot.$f;
+            $isOK = readfile($source);
             $content = ob_get_contents();
             ob_end_clean();
             if (!$isOK && $ext === 'map') {
                 ob_start();
-                $isOK = readfile($staticRoot.substr($f,0,strlen($f)-3).$type);
+                $source = $staticRoot.substr($f,0,strlen($f)-3).$type;
+                $isOK = readfile($source);
                 if ($isOK) {
                     $ext = $type;
                     $content = ob_get_contents();
@@ -39,6 +41,12 @@ class GetSource
                     $ext
                     ;
                 file_put_contents($new, $content);
+                \PMVC\dev(function() use ($source, $f) {
+                    return [
+                        'path'=>$f,
+                        'source'=>$source
+                    ];
+                }, 'source');
             } else {
                 echo $content;
                 trigger_error(json_encode(['Error'=>'Get source file failed.', 'Params'=>[

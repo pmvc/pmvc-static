@@ -21,11 +21,14 @@ class StaticImage
         \PMVC\dev(function() use ($imageUrl, $imageMiddleware, $relatedPath) {
             $old = $this->_header;
             $this->_header = [];
-            return ['header'=>$old, 'middleware'=>[
-                'finial'=>(string)$imageUrl,
-                'middlewareHost'=>$imageMiddleware,
-                'relatePath'=>$relatedPath
-            ]];
+            \PMVC\dev(function() use ($imageUrl, $imageMiddleware, $relatedPath){
+                return [
+                    'finial'=>(string)$imageUrl,
+                    'middlewareHost'=>$imageMiddleware,
+                    'path'=>$relatedPath
+                ];
+            }, 'source');
+            return ['header'=>$old];
         }, 'tohtml');
         if (!empty($this->_header)) {
             \PMVC\plug(\PMVC\getOption(_ROUTER))

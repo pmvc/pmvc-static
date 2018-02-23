@@ -38,12 +38,15 @@ class StaticApp extends Action
         }
         if ($continue) {
             $pUrl = \PMVC\plug('url');
-            $queryString = \PMVC\plug('getenv')->
-                get('QUERY_STRING');
             $url = $pUrl->getUrl($staticRoot);
             $url->set($pUrl->getPath());
-            $url->query($queryString); 
-            $result = (string)$url;
+            $queryString = null;
+            if (0===stripos($staticRoot, 'http')) {
+                $queryString = \PMVC\plug('getenv')->
+                    get('QUERY_STRING');
+                $url->query($queryString); 
+            }
+            $source = (string)$url;
             $checkPath = $url->getPath();
             if ( 1 >= strlen($checkPath) ||
                 $staticRoot === $checkPath
@@ -52,10 +55,15 @@ class StaticApp extends Action
                 echo 'Please specific path.';
                 return;
             } else {
-                \PMVC\dev(function() use ($result, $staticRoot){
-                    return [$result, $staticRoot]; 
+                \PMVC\dev(function() use ($source, $staticRoot, $pUrl, $queryString){
+                    return [
+                        'queryString'=> $queryString,
+                        'path'       => $pUrl->getPath(),
+                        'source'     => $source,
+                        'root'       => $staticRoot,
+                    ]; 
                 }, 'source');
-                $fileInfo = \PMVC\plug('file_info')->path($result);
+                $fileInfo = \PMVC\plug('file_info')->path($source);
                 $header = [
                     'Content-Type: '.$fileInfo->getContentType()
                 ];
@@ -69,7 +77,7 @@ class StaticApp extends Action
                         ->processHeader($header);
                     \PMVC\plug('cache_header')->
                         publicCache(86400*365*10, true);
-                    readfile($result);
+                    readfile($source);
                 }
             }
         }
