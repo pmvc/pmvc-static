@@ -26,9 +26,15 @@ class StaticCook
     private function _getRelatedPath($sliceFrom)
     {
         $rawPath = \PMVC\plug('url')->getPath(); 
-        $paths = explode('/', $rawPath);
-        $paths = array_slice($paths, $sliceFrom);
-        return join('/', $paths);
+        $paths = array_slice(
+            explode('/', $rawPath),
+            $sliceFrom
+        );
+        $relatedPath = join('/', $paths);
+        if ('/' === substr($relatedPath, -1)) {
+            $relatedPath = substr($relatedPath, 0, -1);
+        }
+        return $relatedPath;
     }
 
     private function _splitPath($type)
