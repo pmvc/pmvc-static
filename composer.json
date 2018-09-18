@@ -12,6 +12,7 @@
         "pmvc-plugin/debug": "*",
         "pmvc-plugin/debug_console": "*",
         "pmvc-plugin/cache_header": "*",
+        "pmvc-plugin/file_list": "*",
         "mouf/nodejs-installer": "~1.0"
     },
     "require-dev": {

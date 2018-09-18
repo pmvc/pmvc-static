@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8ac7d65cad953e97787e0228dd89c25c",
+    "content-hash": "ccc5fdfb3e186274f744c5ed3d28167d",
     "packages": [
         {
             "name": "mouf/nodejs-installer",
@@ -332,16 +332,16 @@
         },
         {
             "name": "pmvc-plugin/dev",
-            "version": "0.1.30",
+            "version": "0.1.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/dev.git",
-                "reference": "13042c4b4b3f29c4578e2fdf8a7dddd8fa9eccd7"
+                "reference": "152f8ebd8929d351f1e1f6098c09d0914a473033"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/dev/zipball/13042c4b4b3f29c4578e2fdf8a7dddd8fa9eccd7",
-                "reference": "13042c4b4b3f29c4578e2fdf8a7dddd8fa9eccd7",
+                "url": "https://api.github.com/repos/pmvc-plugin/dev/zipball/152f8ebd8929d351f1e1f6098c09d0914a473033",
+                "reference": "152f8ebd8929d351f1e1f6098c09d0914a473033",
                 "shasum": ""
             },
             "require": {
@@ -370,20 +370,20 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2018-02-14T19:24:12+00:00"
+            "time": "2018-09-18T15:20:25+00:00"
         },
         {
             "name": "pmvc-plugin/dispatcher",
-            "version": "0.1.21",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/dispatcher.git",
-                "reference": "511b32fccd82350f763e8b7f11b19480043436b5"
+                "reference": "3660f5c739e068e16d5a39d554ef22a295b81fb5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/dispatcher/zipball/511b32fccd82350f763e8b7f11b19480043436b5",
-                "reference": "511b32fccd82350f763e8b7f11b19480043436b5",
+                "url": "https://api.github.com/repos/pmvc-plugin/dispatcher/zipball/3660f5c739e068e16d5a39d554ef22a295b81fb5",
+                "reference": "3660f5c739e068e16d5a39d554ef22a295b81fb5",
                 "shasum": ""
             },
             "require": {
@@ -407,7 +407,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2017-07-06T08:31:08+00:00"
+            "time": "2018-08-16T06:35:24+00:00"
         },
         {
             "name": "pmvc-plugin/dotenv",
@@ -524,16 +524,16 @@
         },
         {
             "name": "pmvc-plugin/file_list",
-            "version": "0.3.4",
+            "version": "0.3.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/file_list.git",
-                "reference": "e016beb928dfa0bd1553f8df36ca2214511e8bf4"
+                "reference": "1a3db4a2fc37bb6cc4ceeef3eb83e10b4143bf31"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/file_list/zipball/e016beb928dfa0bd1553f8df36ca2214511e8bf4",
-                "reference": "e016beb928dfa0bd1553f8df36ca2214511e8bf4",
+                "url": "https://api.github.com/repos/pmvc-plugin/file_list/zipball/1a3db4a2fc37bb6cc4ceeef3eb83e10b4143bf31",
+                "reference": "1a3db4a2fc37bb6cc4ceeef3eb83e10b4143bf31",
                 "shasum": ""
             },
             "require": {
@@ -559,7 +559,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2016-12-28T07:25:19+00:00"
+            "time": "2018-09-18T18:17:55+00:00"
         },
         {
             "name": "pmvc-plugin/get",
@@ -946,16 +946,16 @@
         },
         {
             "name": "wp-cli/php-cli-tools",
-            "version": "v0.11.9",
+            "version": "v0.11.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-cli/php-cli-tools.git",
-                "reference": "766653b45f99c817edb2b05dc23f7ee9a893768d"
+                "reference": "f99308f92487efe18b5aac2057240fe5bb542374"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/766653b45f99c817edb2b05dc23f7ee9a893768d",
-                "reference": "766653b45f99c817edb2b05dc23f7ee9a893768d",
+                "url": "https://api.github.com/repos/wp-cli/php-cli-tools/zipball/f99308f92487efe18b5aac2057240fe5bb542374",
+                "reference": "f99308f92487efe18b5aac2057240fe5bb542374",
                 "shasum": ""
             },
             "require": {
@@ -992,7 +992,7 @@
                 "cli",
                 "console"
             ],
-            "time": "2018-04-20T08:11:30+00:00"
+            "time": "2018-08-22T10:11:06+00:00"
         }
     ],
     "aliases": [],

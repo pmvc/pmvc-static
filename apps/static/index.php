@@ -63,25 +63,12 @@ class StaticApp extends Action
                         'root'       => $staticRoot,
                     ]; 
                 }, 'source');
-                $fileInfo = \PMVC\plug('file_info')->path($source);
-                $header = [
-                    'Content-Type: '.$fileInfo->getContentType()
-                ];
-                \PMVC\dev(function() use (&$header){
-                    $old = $header;
-                    $header = [];
-                    return $old;
-                }, 'tohtml');
-                if (!empty($header)) {
-                    \PMVC\plug(\PMVC\getOption(_ROUTER))
-                        ->processHeader($header);
+                return \PMVC\plug('file_list')->
+                  dump($source, true, false, function(){
                     \PMVC\plug('cache_header')->
                         publicCache(86400*365*10, true);
-                    readfile($source);
-                }
+                  });
             }
         }
     }
 }
-
-
