@@ -524,16 +524,16 @@
         },
         {
             "name": "pmvc-plugin/file_list",
-            "version": "0.3.9",
+            "version": "0.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/file_list.git",
-                "reference": "dad84aaea6886d846569a87a9cd743266b222ab0"
+                "reference": "f0f55e4f0fcf98a243ea1a824f90e7d524b320ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/file_list/zipball/dad84aaea6886d846569a87a9cd743266b222ab0",
-                "reference": "dad84aaea6886d846569a87a9cd743266b222ab0",
+                "url": "https://api.github.com/repos/pmvc-plugin/file_list/zipball/f0f55e4f0fcf98a243ea1a824f90e7d524b320ba",
+                "reference": "f0f55e4f0fcf98a243ea1a824f90e7d524b320ba",
                 "shasum": ""
             },
             "require": {
@@ -559,7 +559,7 @@
                 "plug-in",
                 "pmvc"
             ],
-            "time": "2018-09-18T20:52:06+00:00"
+            "time": "2019-02-23T15:46:46+00:00"
         },
         {
             "name": "pmvc-plugin/get",
