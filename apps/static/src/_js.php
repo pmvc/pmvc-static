@@ -20,6 +20,6 @@ class StaticJs
         if (!filesize($minFile)) {
             return false;
         }
-        return \PMVC\plug('file_list')->dump($minFile);
+        return \PMVC\plug('file_list')->dump($minFile, 'js');
     }
 }
