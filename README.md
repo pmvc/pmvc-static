@@ -8,7 +8,7 @@ PMVC static host use with heroku or dokku
 dokku config:set [app name] imageMiddlewareUri=[specific uri]
 dokku config:set [app name] staticRoot=[specific path]
 ```
-* path could be an uri or local file path 
+* staticRoot could be an uri or local file path 
 
 ## URI Spec
 /{c,d}/{c,j,other}/your_file_path
