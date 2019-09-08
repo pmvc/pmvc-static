@@ -12,10 +12,10 @@ dokku config:set [app name] staticRoot=[specific path]
 
 ## URI Spec
 /{c,d}/{c,j,other}/your_file_path
-* First level
+* First level ({c,d})
    * c -> cdn
    * d -> develop mode
-* Second level
+* Second level ({c,j,other})
    * c -> css
    * j -> javascript
    * other or empty -> mean get source directily will not cook by css or js.
