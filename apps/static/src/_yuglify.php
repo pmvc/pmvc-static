@@ -18,7 +18,7 @@ class YUglify
                 $tmpFile
             ];
         } else {
-            $nodeJs = \PMVC\realpath(\PMVC\value(\PMVC\getOption('PLUGIN'), ['view', 'react', 'NODEJS']));
+            $nodeJs = \PMVC\plug('nodejs')->getNodeJs();
             $yuglify = \PMVC\realpath(\PMVC\getOption('yuglify'));
             $cmdArray = [
                 $nodeJs,
