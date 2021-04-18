@@ -17,6 +17,7 @@
   },
   "require-dev": {
     "pmvc-plugin/cli": "*",
+    "pmvc-plugin/unit": "*",
     "pmvc-plugin/debug_cli": "*"
   }
 }

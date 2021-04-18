@@ -1,34 +1,25 @@
 <?php
 
-namespace PMVC\App\react;
+namespace PMVC\App\static_app;
 
-use PHPUnit_Framework_TestCase;
+use PMVC\TestCase;
 
-class ReactAppTest extends PHPUnit_Framework_TestCase
+class StaticAppTest extends TestCase
 {
-    /**
-     * @runInSeparateProcess
-     */
     function testApp()
     {
-        \PMVC\initPlugin([
-            'controller'=>null
-            ,'dispatcher'=>null
-            ,'error'=>null
-            ,'debug'=>['output'=>'debug_cli']
-            ,'dotenv'=>['.env.sample']
-            ,'http'=>null
-        ]);
-        $controller = \PMVC\plug('controller',[
-            _RUN_APPS => __DIR__.'/../apps', 
-            'staticRoot'=>null
-        ]);
+        $test = true;
+        $r = \PMVC\l(__DIR__.'/../htdocs/index', 'controller', ['import' => [
+          'test'=>true
+        ]]);
+        $controller = $r->var['controller'];
+
         if($controller->plugApp()){
             ob_start();
             $controller->process();
             $output = ob_get_contents();
             ob_end_clean();
         }
-        $this->assertContains('Please specific path.',$output);
+        $this->haveString('Please specific path.',$output);
     }
 }
