@@ -33,7 +33,7 @@ class YUglify
         $cmd = join(' ', $cmdArray);
         $this->_shell($cmd);
         \PMVC\dev(function() use ($cmd) {
-            return [$cmd]; 
+            return $cmd; 
         }, 'yuglify');
         
         return $tmpFile;
