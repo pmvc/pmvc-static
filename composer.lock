@@ -517,16 +517,16 @@
         },
         {
             "name": "pmvc-plugin/dev",
-            "version": "0.4.2",
+            "version": "0.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pmvc-plugin/dev.git",
-                "reference": "eeea94d122841c6ba267259c3db7b929c0fe7bf5"
+                "reference": "05c357eafb02fe2632f6b934929c0bc67fc392e0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pmvc-plugin/dev/zipball/eeea94d122841c6ba267259c3db7b929c0fe7bf5",
-                "reference": "eeea94d122841c6ba267259c3db7b929c0fe7bf5",
+                "url": "https://api.github.com/repos/pmvc-plugin/dev/zipball/05c357eafb02fe2632f6b934929c0bc67fc392e0",
+                "reference": "05c357eafb02fe2632f6b934929c0bc67fc392e0",
                 "shasum": ""
             },
             "require": {
@@ -561,9 +561,9 @@
             ],
             "support": {
                 "issues": "https://github.com/pmvc-plugin/dev/issues",
-                "source": "https://github.com/pmvc-plugin/dev/tree/0.4.2"
+                "source": "https://github.com/pmvc-plugin/dev/tree/0.4.3"
             },
-            "time": "2022-07-06T21:27:38+00:00"
+            "time": "2022-07-21T13:51:21+00:00"
         },
         {
             "name": "pmvc-plugin/dispatcher",
